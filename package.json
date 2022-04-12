@@ -1,20 +1,28 @@
 {
+  "author": "Craig Phillips",
+  "description": "Tool for centralizing communications",
   "name": "messsage-hoard",
   "version": "1.0.0",
-  "description": "Tool for centralizing communications",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "bugs": {
+    "url": "https://github.com/CraigPhillips/messsage-hoard/issues"
   },
+  "dependencies": {
+    "be-there": "^1.1.0",
+    "pino": "^7.10.0"
+  },
+  "homepage": "https://github.com/CraigPhillips/messsage-hoard#readme",
+  "license": "MIT",
+  "keywords": [],
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CraigPhillips/messsage-hoard.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/CraigPhillips/messsage-hoard/issues"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://github.com/CraigPhillips/messsage-hoard#readme"
+  "type": "module",
+  "devDependencies": {
+    "pino-pretty": "^7.6.1"
+  }
 }
