@@ -3,15 +3,15 @@ import Pino from 'pino';
 
 export default class PinoWrappedLogger {
   constructor({ isDev = false, wrappedLog } = {}) {
-    const newLogOptions = isDev?
-      {
+    const newLogOptions = isDev
+      ? {
         level: 'debug',
         transport: {
           target: 'pino-pretty',
           options: {
-            colorize: true
+            colorize: true,
           },
-        }
+        },
       } : {};
     const log = wrappedLog || Pino(newLogOptions);
 
@@ -19,7 +19,9 @@ export default class PinoWrappedLogger {
     beThere(this);
   }
 
-  debug(msg, meta) { this.log.debug(meta? meta : msg, meta? msg : undefined); }
-  error(msg, err) { this.log.error(err? err : msg, err? msg : undefined); }
-  info(msg, meta) { this.log.info(meta? meta : msg, meta? msg : undefined); }
-};
+  debug(msg, meta) { this.log.debug(meta || msg, meta ? msg : undefined); }
+
+  error(msg, err) { this.log.error(err || msg, err ? msg : undefined); }
+
+  info(msg, meta) { this.log.info(meta || msg, meta ? msg : undefined); }
+}
